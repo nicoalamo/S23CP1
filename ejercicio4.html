@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1 id="message"> ¡¡¡ La bomba !!! </h1>
+    <h2 id="timer">2</h2>
+    <script>
+        var timer_tag = document.getElementById('timer');
+        var timer = timer_tag.innerHTML;
+
+        var message_tag = document.getElementById('message');
+
+        timer = parseInt(timer);
+
+          interval = setInterval(function(){
+            timer = timer - 1
+            timer_tag.innerHTML = timer
+            if (timer == 0) {
+              message_tag.innerHTML = "BOOM!"
+              clearInterval(interval)
+            }
+          }, 1000);
+
+
+// ver solución manoli!
+
+
+    </script>
+  </body>
+</html>
